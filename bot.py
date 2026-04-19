@@ -167,7 +167,7 @@ async def run_checker_loop(ctx):
     
     # Concurrency level (Ek saath kitne check karein)
     # Railway ke liye 30-50 safe hai. Zyada karoge toh 429 aayega.
-    CONCURRENT_REQUESTS = 10000000 
+    CONCURRENT_REQUESTS = 100000
     
     connector = aiohttp.TCPConnector(limit=0, ssl=False)
     async with aiohttp.ClientSession(connector=connector) as session:
